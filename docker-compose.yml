@@ -1,0 +1,14 @@
+version: "3"
+services:
+    apache:
+        image: httpd_ufg
+        hostname: localhost
+        volumes:
+             - "/home/ricardo/Projetos/angular-quickStart:/home/apps/angular-quickStart"
+        ports:
+             - "80:80"
+             - "8000:8000"
+        command: "/usr/sbin/apache2ctl -D FOREGROUND"
+        restart: always
+        stdin_open: true
+        tty: true
