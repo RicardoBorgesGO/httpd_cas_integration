@@ -9,6 +9,7 @@ RUN apt-get update && apt-get upgrade;\
 ADD assets/apache2.conf /etc/apache2/
 ADD assets/ports.conf /etc/apache2/
 ADD sites-available/* /etc/apache2/sites-available/
+ADD assets/_.ufg.br /home/certs/
 
 RUN mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bk; \
     cd /etc/apache2/sites-available/; \
